@@ -1,0 +1,42 @@
+[general]
+state_file = /var/lib/awslogs/agent-state
+
+[/var/log/secure]
+datetime_format = %b %d %H:%M:%S
+file = /var/log/secure
+buffer_duration = 5000
+log_stream_name = <%= node['app_name'] %>-{instance_id}
+initial_position = start_of_file
+log_group_name = /var/log/secure
+
+[/var/log/nginx/access.log]
+datetime_format = %b %d %H:%M:%S
+file = /var/log/nginx/access.log
+buffer_duration = 5000
+log_stream_name = <%= node['app_name'] %>-{instance_id}
+initial_position = start_of_file
+log_group_name = /var/log/nginx/access.log
+
+[/var/log/nginx/error.log]
+datetime_format = %b %d %H:%M:%S
+file = /var/log/nginx/error.log
+buffer_duration = 5000
+log_stream_name = <%= node['app_name'] %>-{instance_id}
+initial_position = start_of_file
+log_group_name = /var/log/nginx/error.log
+
+[/var/log/php-fpm/7.1/error.log]
+datetime_format = %b %d %H:%M:%S
+file = /var/log/php-fpm/7.1/error.log
+buffer_duration = 5000
+log_stream_name = <%= node['app_name'] %>-{instance_id}
+initial_position = start_of_file
+log_group_name = /var/log/php-fpm/error.log
+
+[/var/log/php-fpm/7.1/www-error.log]
+datetime_format = %b %d %H:%M:%S
+file = /var/log/php-fpm/7.1/www-error.log
+buffer_duration = 5000
+log_stream_name = <%= node['app_name'] %>-{instance_id}
+initial_position = start_of_file
+log_group_name = /var/log/php-fpm/www-error.log
