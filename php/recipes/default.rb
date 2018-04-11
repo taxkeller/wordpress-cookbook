@@ -15,7 +15,7 @@ bash 'update_yum_version' do
   EOH
 end
 
-%(php71 php71-intl php71-cli php71-fpm php71-gd php71-json php71-readline php71-mbstring php71-dom php71-curl php71-mysqlnd php71-mcrypt).each_with_index do |pack|
+%w(php71 php71-intl php71-cli php71-fpm php71-gd php71-json php71-readline php71-mbstring php71-dom php71-curl php71-mysqlnd php71-mcrypt).each_with_index do |pack|
   log pack
   package pack do
     action :install
