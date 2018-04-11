@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
-template '/etc/yum/repos.d/maria.repo' do
+template '/etc/yum.repos.d/maria.repo' do
   backup false
   source 'maria.repo.erb'
   owner 'root'
