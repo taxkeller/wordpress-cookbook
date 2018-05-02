@@ -1,0 +1,5 @@
+# wordpress
+export key_name='wp-key'
+export my_aws_account=''    # fixme
+export stack_name='wordpress'
+export layer_name='wp'
